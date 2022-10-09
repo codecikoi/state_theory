@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:states/inherited_widget.dart';
+import 'package:states/scoped_model.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: InheritedWidgetType(),
+      home: MyScopedModel(),
     );
   }
 }
