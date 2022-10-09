@@ -1,72 +1,17 @@
 import 'package:flutter/material.dart';
 
-class VanillaState extends StatefulWidget {
-  const VanillaState({Key? key}) : super(key: key);
+class InheritedWidgetType extends StatefulWidget {
+  const InheritedWidgetType({Key? key}) : super(key: key);
 
   @override
-  State<VanillaState> createState() => _VanillaStateState();
+  State<InheritedWidgetType> createState() => _InheritedWidgetTypeState();
 }
 
-class _VanillaStateState extends State<VanillaState> {
-  int _rating = 0;
-
+class _InheritedWidgetTypeState extends State<InheritedWidgetType> {
   @override
   Widget build(BuildContext context) {
-    double size = 50;
+    return Container(
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Vanilla State'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Row(
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: (_rating >= 2
-                  ? Icon(
-                      Icons.star,
-                      size: size,
-                    )
-                  : Icon(
-                      Icons.star_border,
-                      size: size,
-                    )),
-              color: Colors.indigo[500],
-              iconSize: size,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: (_rating >= 2
-                  ? Icon(
-                      Icons.star,
-                      size: size,
-                    )
-                  : Icon(
-                      Icons.star_border,
-                      size: size,
-                    )),
-              color: Colors.indigo[500],
-              iconSize: size,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: (_rating >= 3
-                  ? Icon(
-                      Icons.star,
-                      size: size,
-                    )
-                  : Icon(
-                      Icons.star_border,
-                      size: size,
-                    )),
-              color: Colors.indigo[500],
-              iconSize: size,
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
