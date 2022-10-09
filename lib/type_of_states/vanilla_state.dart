@@ -21,9 +21,32 @@ class _VanillaStateState extends State<VanillaState> {
       ),
       body: Center(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  _rating = 1;
+                });
+              },
+              icon: (_rating >= 1
+                  ? Icon(
+                      Icons.star,
+                      size: size,
+                    )
+                  : Icon(
+                      Icons.star_border,
+                      size: size,
+                    )),
+              color: Colors.indigo[500],
+              iconSize: size,
+            ),
+            IconButton(
+              onPressed: () {
+                setState(() {
+                  _rating = 2;
+                });
+              },
               icon: (_rating >= 2
                   ? Icon(
                       Icons.star,
@@ -37,21 +60,11 @@ class _VanillaStateState extends State<VanillaState> {
               iconSize: size,
             ),
             IconButton(
-              onPressed: () {},
-              icon: (_rating >= 2
-                  ? Icon(
-                      Icons.star,
-                      size: size,
-                    )
-                  : Icon(
-                      Icons.star_border,
-                      size: size,
-                    )),
-              color: Colors.indigo[500],
-              iconSize: size,
-            ),
-            IconButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  _rating = 3;
+                });
+              },
               icon: (_rating >= 3
                   ? Icon(
                       Icons.star,
