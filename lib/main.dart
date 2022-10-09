@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:states/type_of_states/vanilla_state.dart';
+import 'package:states/inherited_widget.dart';
 
 void main() {
   runApp(const MyApp());
